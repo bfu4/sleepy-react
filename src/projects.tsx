@@ -26,7 +26,7 @@ export function ProjectComponent(props : { project : Project }) {
                 target="_blank"
                 rel="noreferrer"
             >
-                <div className="container-item container-0-5 max-200 fit">
+                <div className="container-item container-0-5 max-200">
                     <div className="container-item project-name">{ props.project.name }</div>
                     <div className="container-item project-description"> { props.project.description }</div>
                 </div>

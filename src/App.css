@@ -97,9 +97,3 @@ a {
 .max-200 {
   max-width: 200px;
 }
-
-.fit {
-  flex: inherit;
-  width: fit-content;
-  max-width: content-box;
-}
