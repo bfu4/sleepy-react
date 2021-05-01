@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// Good icons, thanks @alii
+import { GitHub, Linkedin, Twitter } from "react-feather";
+
+import { Link } from "./Link";
+
+export default function App() {
+    return (
+        <div className="base">
+            <div className="container-0-5">
+                <div className="container-item title">Bella Fusari</div>
+                <div className="container-item subtitle">@bfu4</div>
+            </div>
+            <div className="container-0-5 centered">
+                <Link url="https://linkedin.com/in/bella-fusari" classes="icon container-item" content={<Linkedin/>}/>
+                <Link url="https://github.com/bfu4" classes="icon container-item" content={<GitHub/>}/>
+                <Link url="https://twitter.com/bellafusari1" classes="icon container-item" content={<Twitter/>}/>
+            </div>
+        </div>
+    );
 }
 
-export default App;
