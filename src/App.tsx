@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './app.css';
 
 // Good icons, thanks @alii
 import { GitHub, Linkedin, Twitter, Mail } from "react-feather";
@@ -16,14 +16,7 @@ export default function App() {
             ReactDOM.render(<div>Not listening to anything.</div>, sid);
             return;
         }
-        const songData = {
-            name: song.name,
-            artist: song.artists[0].name,
-            album: song.album.name,
-            icon: song.album.images[0].url,
-            url: song.external_urls.spotify
-        };
-        ReactDOM.render(<Spotify songData={ songData }/>, sid);
+        ReactDOM.render(<Spotify songData={ song }/>, sid);
     });
     return (
         <div className="base">
@@ -32,11 +25,11 @@ export default function App() {
                 <div className="container-item subtitle">@bfu4</div>
                 <div id="spotify" className="container-item"></div>
             </div>
-            <div className="container-0-5 centered">
-                <Link url="https://linkedin.com/in/bella-fusari" classes="icon container-item" content={ <Linkedin/> }/>
-                <Link url="https://github.com/bfu4" classes="icon container-item" content={ <GitHub/> }/>
-                <Link url="https://twitter.com/bellafusari1" classes="icon container-item" content={ <Twitter/> }/>
-                <Link url="mailto:bella@localhost22.com" classes="icon container-item" content={ <Mail/> }/>
+            <div className="container-0-5">
+                <Link url="https://linkedin.com/in/bella-fusari" classes="icon container-item" content={ <Linkedin size={30}/> }/>
+                <Link url="https://github.com/bfu4" classes="icon container-item" content={ <GitHub size={30}/> }/>
+                <Link url="https://twitter.com/bellafusari1" classes="icon container-item" content={ <Twitter size={30}/> }/>
+                <Link url="mailto:bella@localhost22.com" classes="icon container-item" content={ <Mail size={30}/> }/>
             </div>
             <ProjectsComponent/>
         </div>

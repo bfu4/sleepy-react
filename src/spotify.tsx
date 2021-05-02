@@ -1,11 +1,6 @@
-import querystring from "querystring";
-import axios from "axios";
-
 import { Music } from "react-feather";
 
-const rt = process.env.REACT_APP_SPOTIFY_REFRESH_TOKEN;
-const cid = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
-const scrt = process.env.REACT_APP_SPOTIFY_CLIENT_SECRET;
+const DISCORD_ID = "606164529210064897";
 
 interface SongData {
     name: string;
@@ -15,35 +10,14 @@ interface SongData {
     url: string;
 }
 
-export async function getSong() : Promise<any> {
-    if (!rt || !cid || !scrt) {
+export async function getSong() : Promise<SongData| null> {
+    const res = await fetch(`https://api.lanyard.rest/v1/users/${DISCORD_ID}`);
+    const json = await res.json();
+    const data = json.data.spotify;
+    if (!data || !data.song) {
         return null;
     }
-    const token = await getTokenFromRef(rt!, cid!, scrt!);
-    return (await axios.get("https://api.spotify.com/v1/me/player/currently_playing", {
-        headers: {
-            'Accept': '*/*, application/json',
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${ token }`
-        }
-    })).data.item;
-}
-
-async function getTokenFromRef(refreshToken : string, clientId : string, clientSecret : string) : Promise<string> {
-    const qs = querystring.stringify({ grant_type: 'refresh_token', refresh_token: refreshToken });
-    // Not sure how I'd do this with node-fetch
-    return (await axios.post("https://accounts.spotify.com/api/token", qs,
-        {
-            method: "POST",
-            headers: {
-                'Accept': '*/*',
-                'Content-Type': 'application/x-www-form-urlencoded',
-                'Authorization': `Basic ${ Buffer.from(clientId + ":" + clientSecret).toString('base64') }`
-            },
-        }).catch((err) => {
-            console.error(err)
-            return err;
-    })).data.access_token;
+    return {name: data.song, artist: data.artist, album: data.album, icon: data.album_art_url, url: `https://open.spotify.com/track/${data.track_id}`};
 }
 
 export function Spotify(props: {songData: SongData}) {
