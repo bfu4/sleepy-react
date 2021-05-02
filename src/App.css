@@ -74,13 +74,11 @@ a {
   font-size: 20px;
   font-weight: bolder;
   color: #5d4966;
-  max-width: 100px;
 }
 
 .project-description {
   font-size: 11px;
   color: #676d67;
-  max-width: 200px;
 }
 
 .project-icon {

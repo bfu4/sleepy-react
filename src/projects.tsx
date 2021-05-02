@@ -1,6 +1,31 @@
 export const project_list : Project[] = [
-    { name: "Test", description: "This site. In React.", url: ".", icon: "./favicon.ico" },
-    { name: "Meow", description: "Ok" }
+    { name: "sleeepy.ninja", description: "This site. In React.", url: ".", icon: "./favicon.ico" },
+    {
+        name: "meow",
+        description: "Playful bot that sends cat pictures and crypto prices.",
+        url: "https://top.gg/bot/832650363088797696",
+        icon: "https://images.discordapp.net/avatars/832650363088797696/f6d2d23bfaee3cfc8475400df53da147.png"
+    },
+    { name: "cabbage", description: "Easy to use, simplistic, node-gyp wrapper.", url: "https://npmjs.org/cabbage-c"},
+    { name: "BONK", description: "Easy library for setting up Spigot projects. Fast.", url:"https://github.com/bfu4/BONK" },
+    {
+        name: "edno",
+        description: "Organization holding research materials for edno, the proof of concept, with the abstract defined as the url.",
+        url: "https://github.com/ednoproject",
+        icon: "https://avatars.githubusercontent.com/u/82788471?s=200&v=4"
+    },
+    {
+        name: "sonare",
+        description: "Under Construction. Reflective in-game Spigot-plugin debugger.",
+        url: "https://github.com/bfu4/sonare",
+        icon: "./sonare.png"
+    },
+    {
+        name: "fruitcuptobitcoin",
+        description: "Meme!",
+        url: "https://fruitcuptobitcoin.xyz",
+        icon: "https://fruitcuptobitcoin.xyz/cup.png"
+    },
 ]
 
 /**
