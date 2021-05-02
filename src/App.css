@@ -95,3 +95,56 @@ a {
 .max-200 {
   max-width: 200px;
 }
+
+.spotify-album {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.song-title {
+  font-size: 15px;
+  font-weight: bolder;
+  color: #241a2b;
+}
+
+.spotify-container {
+  margin-top: 2em;
+  background-color: #968b99;
+  border-radius: 10px;
+  max-width: 300px;
+  display: flex;
+  overflow: hidden;
+  padding: 0.3em;
+  color: #3b363e;
+  align-self: inherit;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.spotify-container:hover {
+  transform: translateX(0.6em) scale(1.05);
+}
+
+.spotify-container-item {
+  align-self: inherit;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.tip {
+  font-size: 11px;
+}
+
+.spotify-extern {
+  color: #241a2b;
+  background-color: #7c7680;
+  border-radius: 5px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.spotify-extern:hover {
+  background-color: #67606b;
+}
+
+
