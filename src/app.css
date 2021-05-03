@@ -104,6 +104,12 @@ a {
   width: 100px;
   height: 100px;
   border-radius: 15px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.spotify-album:hover {
+  transform: scale(1.2) rotate(0.1rad);
 }
 
 .song-title {
@@ -127,6 +133,7 @@ a {
 }
 
 .spotify-container:hover {
+  background-color: #927d91;
   transform: translateX(0.6em) scale(1.05);
 }
 
