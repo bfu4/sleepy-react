@@ -6,6 +6,11 @@ export const project_list : Project[] = [
         url: "https://top.gg/bot/832650363088797696",
         icon: "https://images.discordapp.net/avatars/832650363088797696/f6d2d23bfaee3cfc8475400df53da147.png"
     },
+    {
+        name: "runner",
+        description: "VSCode extension for *nix based distributions to run `make` in cwd.",
+        url: "https://github.com/bfu4/runner"
+    },
     { name: "cabbage", description: "Easy to use, simplistic, node-gyp wrapper.", url: "https://npmjs.org/cabbage-c"},
     { name: "BONK", description: "Easy library for setting up Spigot projects. Fast.", url:"https://github.com/bfu4/BONK" },
     {
@@ -25,7 +30,7 @@ export const project_list : Project[] = [
         description: "Meme!",
         url: "https://fruitcuptobitcoin.xyz",
         icon: "https://fruitcuptobitcoin.xyz/cup.png"
-    },
+    }
 ]
 
 /**
