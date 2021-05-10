@@ -39,7 +39,7 @@ const items = [
 
 export const Stack = () => {
   return (
-      <div className="container-0-5" style={{display: "inline"}}>
+      <div className="container-0-5">
           {items.map((item) => {
               return Element(item.id, item.content);
           })}
