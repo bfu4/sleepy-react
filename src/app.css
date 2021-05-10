@@ -17,6 +17,8 @@ html, body {
 a {
   text-decoration: none;
   outline: 0;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .icon {
@@ -161,5 +163,9 @@ a {
 
 #spotify {
   overflow: hidden;
+}
+
+.tagline:hover {
+  text-decoration: underline #3b363e;
 }
 

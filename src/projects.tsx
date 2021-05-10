@@ -7,6 +7,11 @@ export const project_list : Project[] = [
         icon: "https://images.discordapp.net/avatars/832650363088797696/f6d2d23bfaee3cfc8475400df53da147.png"
     },
     {
+        name: "atoh",
+        description: "Simple, organized binary for translating hex to ascii and ascii to hex.",
+        url: "https://github.com/bfu4/atoh",
+    },
+    {
         name: "runner",
         description: "VSCode extension for *nix based distributions to run `make` in cwd.",
         url: "https://github.com/bfu4/runner"
