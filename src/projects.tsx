@@ -1,4 +1,5 @@
 export const project_list : Project[] = [
+    { name: "mdis", description: "\u26A1 An attempt at disassembling MicroPython. Very experimental, provides an ability to view \"possible\" instructions. ", url: "https://github.com/bfu4/mdis" },
     { name: "sleeepy.ninja", description: "This site. In React.", url: ".", icon: "./favicon.ico" },
     {
         name: "meow",
