@@ -1,0 +1,22 @@
+.bar {
+    background-color: #000000;
+    opacity: 40%;
+    position: absolute;
+    height: 100%;
+    z-index: 1;
+    margin-right: 80%;
+    padding: 30px 20px;
+    color: #e7e7e7;
+    display: flex;
+}
+
+.bar-item {
+    opacity: 100%;
+    margin-top: 0.7em;
+    margin-bottom: 0.7em;
+    position: inherit;
+    flex: none;
+    width: 100%;
+    display: block;
+    align-self: baseline;
+}

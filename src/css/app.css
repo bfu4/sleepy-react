@@ -5,13 +5,32 @@
 }
 
 html, body {
-  background-color: #e7e7e7;
   font-family: "Overpass", sans-serif;
-  overflow-x: hidden;
+}
+
+@media only screen {
+  body {
+    background: url(../images/sunset.png) center no-repeat #4a4762;
+  }
 }
 
 .base {
   margin: 3em;
+  min-width: 60%;
+}
+
+.base-container {
+  margin-left:-.75rem;
+  margin-right:-.75rem;
+  margin-top:-.75rem;
+  display: flex;
+}
+
+.base-container-item {
+  flex-basis:0;
+  flex-grow:1;
+  flex-shrink:1;
+  min-height: 0;
 }
 
 a {
