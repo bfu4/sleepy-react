@@ -6,25 +6,16 @@ import {GitHub, Linkedin, Twitter, Mail} from "react-feather";
 
 import {Link} from "./Link";
 import {ProjectsComponent} from "./project-component";
-import {getSong, Spotify} from "./spotify";
-import ReactDOM from 'react-dom';
+import {Spotify} from "./spotify";
 import {Stack} from "./stack";
 
 export default function App() {
-    getSong().then((song) => {
-        const sid = document.getElementById("spotify");
-        if (song === null || song === undefined) {
-            ReactDOM.render(<div>Software Engineer</div>, sid);
-            return;
-        }
-        ReactDOM.render(<Spotify songData={song}/>, sid);
-    });
     return (
         <div className="base">
             <div className="container-0-5">
                 <div className="container-item title">Bella Fusari</div>
                 <div className="container-item subtitle">@bfu4</div>
-                <div id="spotify" className="container-item"/>
+                <Spotify/>
             </div>
             <Stack/>
             <div style={{marginTop: 2 + "em", marginBottom: 2 + "em"}}>

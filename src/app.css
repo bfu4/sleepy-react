@@ -150,15 +150,14 @@ a {
 }
 
 .spotify-extern {
-  color: #241a2b;
-  background-color: #7c7680;
+  color: rgba(43, 222, 107, 0.68);
   border-radius: 5px;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 
 .spotify-extern:hover {
-  background-color: #67606b;
+  color: rgba(26, 156, 72, 0.68);
 }
 
 #spotify {
