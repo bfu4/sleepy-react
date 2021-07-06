@@ -5,7 +5,6 @@ import './app.css';
 import {GitHub, Linkedin, Twitter, Mail} from "react-feather";
 
 import {Link} from "./Link";
-import {ProjectsComponent} from "./project-component";
 import {Spotify} from "./spotify";
 import {Stack} from "./stack";
 
@@ -32,14 +31,6 @@ export default function App() {
                           content={<Twitter size={30}/>}/>
                     <Link url="mailto:bella@localhost22.com" classes="icon container-item" content={<Mail size={30}/>}/>
                 </div>
-            </div>
-            <div style={{marginTop: 2 + "em", marginBottom: 2 + "em"}}>
-                <div className="container-0-5" id="projects">
-                    <div className="container-item" style={{fontSize: 20 + "px"}}>
-                        Projects <a href="#projects" className="icon tagline"> # </a>
-                    </div>
-                </div>
-                <ProjectsComponent/>
             </div>
         </div>
     );
