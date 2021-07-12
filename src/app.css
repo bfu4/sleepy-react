@@ -4,6 +4,27 @@
   overflow-x: hidden;
 }
 
+:root {
+  --highlight-color: #5dea93;
+  --base-dark: #616060;
+  /* Would be nicely coupled with bold */
+  --emphasized-text: #292d29;
+  /* spotify theme colors */
+  --spotify-background: rgba(38, 38, 38, 0.11);
+}
+
+a {
+  outline: 0;
+  text-decoration: none;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--highlight-color);
+}
+
 html, body {
   background-color: #e7e7e7;
   font-family: "Overpass", sans-serif;
@@ -14,22 +35,19 @@ html, body {
   margin: 3em;
 }
 
-a {
-  text-decoration: none;
-  outline: 0;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-}
-
 .icon {
-  color: #968b99;
+  color: var(--base-dark);
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 
 .icon:hover {
-  color: #676d67;
+  color: var(--highlight-color);
 }
+
+/*
+  Sizing/Containerization/Alignment stuff.
+ */
 
 .container-0-5 {
   margin: 0.5em;
@@ -48,8 +66,16 @@ a {
   align-content: center;
 }
 
+.max-200 {
+  max-width: 200px;
+}
+
+/*
+  Text fields.
+ */
+
 .title {
-  color: #241a2b;
+  color: var(--emphasized-text);
   font-size: 40px;
 }
 
@@ -58,53 +84,21 @@ a {
   color: #959895;
 }
 
-#project {
-  background-color: #cecacf;
-  border-radius: 10px;
-  -webkit-transition: 0.3s ease;
-  max-width: 300px;
-  transition: 0.3s ease;
-  display: flex;
-}
+/*
+  Spotify.
+ */
 
-#project:hover {
-  background-color: #bdb0c1;
-  transform: translateX(0.6em) scale(1.05);
-}
-
-.project-name {
-  font-size: 20px;
-  font-weight: bolder;
-  color: #5d4966;
-}
-
-.project-description {
-  font-size: 11px;
-  color: #676d67;
-}
-
-.project-icon {
-  max-height: 50px;
-  max-width: 50px;
+#spotify {
   overflow: hidden;
 }
 
-.margin-left-icon {
-  margin-left: 1em;
-  padding-top: 1.5em;
-}
-
-.max-200 {
-  max-width: 200px;
-}
-
 .spotify-album {
-  min-height: 100px;
-  min-width: 100px;
-  max-height: 100px;
-  max-width: 100px;
-  width: 100px;
-  height: 100px;
+  min-height: 60px;
+  min-width: 60px;
+  max-height: max-content;
+  max-width: max-content;
+  width: 60px;
+  height: 60px;
   border-radius: 15px;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
@@ -112,37 +106,6 @@ a {
 
 .spotify-album:hover {
   transform: scale(1.2) rotate(0.1rad);
-}
-
-.song-title {
-  font-size: 15px;
-  font-weight: bolder;
-  color: #241a2b;
-}
-
-.spotify-container {
-  margin-top: 2em;
-  background-color: #968b99;
-  border-radius: 10px;
-  max-width: 300px;
-  display: flex;
-  overflow: hidden;
-  padding: 0.3em;
-  color: #3b363e;
-  align-self: inherit;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-}
-
-.spotify-container:hover {
-  background-color: #927d91;
-  transform: translateX(0.6em) scale(1.05);
-}
-
-.spotify-container-item {
-  align-self: inherit;
-  padding: 10px;
-  overflow: hidden;
 }
 
 .tip {
@@ -157,14 +120,44 @@ a {
 }
 
 .spotify-extern:hover {
-  color: rgba(26, 156, 72, 0.68);
+  color: var(--spotify-icon);
 }
 
-#spotify {
+.spotify-title {
+  color: var(--emphasized-text);
+  font-weight: bold;
+}
+
+.spotify-artist {
+  color: #343834;
+  font-weight: lighter;
+  font-size: 11px;
+}
+
+.spotify-container {
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+  background-color: var(--spotify-background);
+  border: 2pt solid rgba(186, 185, 185, 0.13);
+  border-radius: 10px;
+  min-width: max-content;
+  max-width: 300px;
+  max-height: max-content;
+  display: flex;
   overflow: hidden;
+  color: #3b363e;
+  align-self: inherit;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
-.tagline:hover {
-  text-decoration: underline #3b363e;
+.spotify-info-container {
+  display: grid;
+}
+
+.spotify-container-item {
+  align-self: inherit;
+  padding: 10px;
+  overflow: hidden;
 }
 

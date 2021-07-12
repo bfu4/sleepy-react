@@ -29,13 +29,6 @@ const items = [
     {id: "git2", content: <SiGitlab title="Gitlab" size={ICON_SIZE} className="icon" />},
     {id: "git3", content: <SiGit title="Git" size={ICON_SIZE} className="icon" />},
     {id: "ps", content: <SiAdobephotoshop title="Photoshop" size={ICON_SIZE} className="icon" />},
-    {id: "sol", content: <img
-            title="Solidity"
-            src="https://raw.githubusercontent.com/bfu4/bfu4/master/sol.png"
-            alt="sol"
-            width={ICON_SIZE}
-            height={ICON_SIZE}
-        />},
 ];
 
 export const Stack = () => {

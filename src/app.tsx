@@ -4,9 +4,9 @@ import './app.css';
 // Good icons, thanks @alii
 import {GitHub, Linkedin, Twitter, Mail} from "react-feather";
 
-import {Link} from "./Link";
-import {Spotify} from "./spotify";
-import {Stack} from "./stack";
+import {Link} from "./components/Link";
+import {Spotify} from "./components/spotify";
+import {Stack} from "./components/stack";
 
 export default function App() {
     return (
@@ -14,13 +14,16 @@ export default function App() {
             <div className="container-0-5">
                 <div className="container-item title">Bella Fusari</div>
                 <div className="container-item subtitle">@bfu4</div>
-                <Spotify/>
+                <div id="spotify" style={{fontSize: 20 + "px", marginTop: 1 + "em"}}>
+                    Currently Playing <a href="#spotify" className="icon">#</a>
+                    <Spotify/>
+                </div>
             </div>
             <Stack/>
             <div style={{marginTop: 2 + "em", marginBottom: 2 + "em"}}>
                 <div className="container-0-5" id="links">
                     <div className="container-item" style={{fontSize: 20 + "px"}}>
-                        Links <a href="#links" className="icon tagline"> # </a>
+                        Links <a href="#links" className="icon">#</a>
                     </div>
                 </div>
                 <div className="container-0-5">
