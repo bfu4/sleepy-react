@@ -15,7 +15,6 @@ export default function App() {
                 <div className="container-item title">Bella Fusari</div>
                 <div className="container-item subtitle">@bfu4</div>
                 <div id="spotify" style={{fontSize: 20 + "px", marginTop: 1 + "em"}}>
-                    Currently Playing <a href="#spotify" className="icon">#</a>
                     <Spotify/>
                 </div>
             </div>

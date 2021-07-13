@@ -29,16 +29,20 @@ export function Spotify() {
     }, [song]);
     if (song) {
         return (
-            <div className="spotify-container">
-                <img src={song.icon} alt="Album" className="spotify-album spotify-container-item" draggable="false"/>
-                <div className="spotify-container-item spotify-info-container">
-                    <div className="spotify-title">{song.name}</div>
-                    <div className="spotify-artist">{song.artist}</div>
-                    <a href={song.url} className="container-item tip icon" target="_blank" rel="noreferrer">
-                        <SiSpotify size={20}/>
-                    </a>
+            <>
+                Currently Playing <a href="#spotify" className="icon">#</a>
+                <div className="spotify-container">
+                    <img src={song.icon} alt="Album" className="spotify-album spotify-container-item"
+                         draggable="false"/>
+                    <div className="spotify-container-item spotify-info-container">
+                        <div className="spotify-title">{song.name}</div>
+                        <div className="spotify-artist">{song.artist}</div>
+                        <a href={song.url} className="container-item tip icon" target="_blank" rel="noreferrer">
+                            <SiSpotify size={20}/>
+                        </a>
+                    </div>
                 </div>
-            </div>
+            </>
         );
     }
 
